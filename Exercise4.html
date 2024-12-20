@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header ...'
+                'nav nav ...'
+                'section aside ...'
+                'article aside ...'
+                'footer footer ...';
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            
+            max-width: 90%;
+            margin: 25px auto 25px auto;
+        }
+        #header {
+            grid-area: header;
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #nav {
+            grid-area: nav;
+            background: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        #section {
+            grid-area: section;
+            background: #e9ecef;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        #aside {
+            grid-area: aside;
+            background: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        #article {
+            grid-area: article;
+            background: #e9ecef;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        #footer {
+            grid-area: footer;
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Header</h1>
+        </div>
+        <div id="nav">
+            <p>Navigation</p>
+        </div>
+        <div id="section">
+            <h2>Section</h2>
+            <p>Content for the section goes here.</p>
+        </div>
+        <div id="article">
+            <h2>Article</h2>
+            <p>Details about the article content.</p>
+        </div>
+        <div id="aside">
+            <h2>Aside</h2>
+            <p>Additional information goes here.</p>
+        </div>
+        <div id="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>
