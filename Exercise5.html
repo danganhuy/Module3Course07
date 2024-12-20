@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+        }
+        .option {
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+        .option a {
+            color: white;
+            text-decoration: none;
+        }
+        .option:hover {
+            background: black;
+        }
+        #home-list {
+            position: absolute;
+            visibility: hidden;
+            list-style: none;
+            background-color: #333;
+            top: 50px;
+            width: 100px;
+        }
+        #home-list li {
+            padding: 2px 5px;
+        }
+        #home-list li:hover{
+            background: black;
+        }
+        #login {
+            position: absolute;
+            right: 5px;
+        }
+        #home:hover #home-list {
+            visibility: visible;
+            top: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        aside {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="option"><a href="#">LOGO</a></div>
+        <div class="option" id="home">
+            <a href="#">Home</a>
+            <ul id="home-list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+        </div>
+        <div class="option"><a href="#">About</a></div>
+        <div class="option"><a href="#">Projects</a></div>
+        <div class="option"><a href="#">Contact</a></div>
+        <div class="option" id="login"><a href="#">Login</a></div>
+    </nav>
+    <div class="container">
+        <aside>
+            <h3>Sidebar</h3>
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Main Content</h2>
+            <p>Welcome to our website! Here is some main content to read and enjoy. Feel free to explore and learn more about what we offer.</p>
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <ul>
+                <li>Link A</li>
+                <li>Link B</li>
+                <li>Link C</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>
+</html>
